@@ -22,13 +22,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        String[] antMatchersForAdmin = {"/product/all", "/shop/all", "/cart/all", "/person/create", "/person/delete",
-                "/person/all", "/product/create", "/product/delete", "/product/update", "/shop/add",
+        String[] antMatchersForAdmin = {"/product/all", "/shop/all", "/person/create","/person", "/person/delete",
+                "/person/all", "/product/create","/product/get", "/product/delete", "/product/update",  "/shop/create","/shop/get","/shop/add",
                 "/shop/delete", "/cart/create", "/cart/delete", "/cart/get", "/cart/add",
                 "/cart/remove", "/cart/clean","/cart/all"};
         String[] antMatchersForCustomer = {"/product/all", "/shop/all",
                 "/cart/create", "/cart/delete", "/cart/get", "/cart/add", "/cart/remove", "/cart/clean",
-                "/cart/update", "/cart/all"};
+                "/cart/update"};
         http.headers().frameOptions().disable();
         http.csrf()
                 .disable()

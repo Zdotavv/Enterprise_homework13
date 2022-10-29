@@ -13,7 +13,7 @@
     <nav class="menu">
         <h2 align="center">Menu:</h2>
         <a href="${pageContext.request.contextPath}/cart/create">Create new cart</a><br>
-        <a href="${pageContext.request.contextPath}/cart/all">View all carts</a><br>
+        <a href="${pageContext.request.contextPath}/cart/all">View all carts (only for admin)</a><br>
         <a href="${pageContext.request.contextPath}/cart/get">View cart by ID</a><br>
         <a href="${pageContext.request.contextPath}/cart/delete">Delete cart</a><br>
         <a href="${pageContext.request.contextPath}/cart/add">Add product to cart</a><br>

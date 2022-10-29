@@ -31,7 +31,7 @@
     <h2>Main menu:</h2>
     <nav class="menu">
         <ul>
-            <li><a href="${pageContext.request.contextPath}/person">Persons control page</a></li>
+            <li><a href="${pageContext.request.contextPath}/person">Persons control page (only for admin)</a></li>
             <li><a href="${pageContext.request.contextPath}/shop">Shops control page</a></li>
             <li><a href="${pageContext.request.contextPath}/product">Products control page</a></li>
             <li><a href="${pageContext.request.contextPath}/cart">Carts control page</a></li>
