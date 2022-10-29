@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.zdotavv</groupId>
-    <artifactId>Enterprise_homework9</artifactId>
+    <artifactId>Enterprise_homework10</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>Enterprise_homework9</name>
-    <description>Enterprise_homework9</description>
+    <name>Enterprise_homework10</name>
+    <description>Enterprise_homework10</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
