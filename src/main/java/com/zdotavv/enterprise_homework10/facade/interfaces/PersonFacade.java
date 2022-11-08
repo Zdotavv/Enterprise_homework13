@@ -18,5 +18,6 @@ public interface PersonFacade {
 
         List<PersonDto> getAllPersons();
 
-        PersonDto getPersonByUsername(PersonDto personDto);
+        PersonDto getPersonByUsername(PersonDto personDto)throws NotFoundException;
+
 }

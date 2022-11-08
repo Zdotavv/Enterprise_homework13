@@ -5,6 +5,7 @@ import com.zdotavv.enterprise_homework10.model.Cart;
 import com.zdotavv.enterprise_homework10.model.Product;
 import com.zdotavv.enterprise_homework10.repository.CartRepository;
 import com.zdotavv.enterprise_homework10.service.interfaces.CartService;
+import com.zdotavv.enterprise_homework10.service.interfaces.EmailService;
 import com.zdotavv.enterprise_homework10.service.interfaces.PersonService;
 import com.zdotavv.enterprise_homework10.service.interfaces.ProductService;
 import lombok.extern.slf4j.Slf4j;

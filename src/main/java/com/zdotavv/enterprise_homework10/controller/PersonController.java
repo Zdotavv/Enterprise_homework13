@@ -91,6 +91,21 @@ import org.springframework.web.bind.annotation.RequestMethod;
         model.addAttribute("all", personFacade.getAllPersons());
         return "/person/allPersons";
     }
+
+    @RequestMapping(value = "/getByUsername", method = RequestMethod.GET)
+    public String getPersonByUsername(Model model) {
+        model.addAttribute("personByUsername", new PersonDto());
+        return "/person/getPersonByUsername";
+    }
+
+    @RequestMapping(value = "/getByUsername", method = RequestMethod.POST)
+    @Transactional
+    public String getPersonByUsername(@ModelAttribute("personByUsername") PersonDto personDto, Model model) throws NotFoundException {
+        PersonDto personByUsername = personFacade.getPersonByUsername(personDto);
+        model.addAttribute("personByUsername", personByUsername);
+        log.info("Person with Username [{}] is gotten", personDto.getUsername());
+        return "/person/getPersonByUsernameSuccess";
+    }
 }
 
 

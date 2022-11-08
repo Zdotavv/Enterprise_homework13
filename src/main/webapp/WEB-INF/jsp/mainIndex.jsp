@@ -18,7 +18,8 @@
 
     <h3><c:choose>
         <c:when test="${pageContext.request.userPrincipal.name == null}">Welcome! Log in or Register, please:</c:when>
-        <c:otherwise>Welcome, ${pageContext.request.userPrincipal.name}!</c:otherwise>
+        <c:otherwise>Welcome, ${pageContext.request.userPrincipal.name}! </c:otherwise>
+
     </c:choose></h3>
     <sec:authorize access="isAuthenticated()">
         <h4><a href="/logout">Log out</a></h4>
@@ -31,7 +32,7 @@
     <h2>Main menu:</h2>
     <nav class="menu">
         <ul>
-            <li><a href="${pageContext.request.contextPath}/person">Persons control page (only for admin)</a></li>
+            <li><a href="${pageContext.request.contextPath}/person">Persons control page</a></li>
             <li><a href="${pageContext.request.contextPath}/shop">Shops control page</a></li>
             <li><a href="${pageContext.request.contextPath}/product">Products control page</a></li>
             <li><a href="${pageContext.request.contextPath}/cart">Carts control page</a></li>

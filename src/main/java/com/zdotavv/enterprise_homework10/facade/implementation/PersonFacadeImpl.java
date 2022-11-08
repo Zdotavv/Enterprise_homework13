@@ -53,7 +53,7 @@ public class PersonFacadeImpl implements PersonFacade {
     }
 
     @Override
-    public PersonDto getPersonByUsername(PersonDto personDto) {
+    public PersonDto getPersonByUsername(PersonDto personDto) throws NotFoundException{
         Person getPerson=personService.getPersonByUsername(personDto.getUsername());
         return convertPersonToPersonDto(getPerson);
     }

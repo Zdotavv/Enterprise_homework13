@@ -4,8 +4,8 @@ import com.zdotavv.enterprise_homework10.exceptions.NotFoundException;
 import com.zdotavv.enterprise_homework10.model.Person;
 import com.zdotavv.enterprise_homework10.model.Role;
 import com.zdotavv.enterprise_homework10.repository.PersonRepository;
+import com.zdotavv.enterprise_homework10.service.interfaces.EmailService;
 import com.zdotavv.enterprise_homework10.service.interfaces.PersonService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -17,13 +17,19 @@ import java.util.List;
 
 @Service
 public class PersonServiceImpl implements PersonService {
-    @Autowired
+
     private final PersonRepository personRepository;
-    @Autowired
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
-    public PersonServiceImpl(PersonRepository personRepository) {
+
+    private final BCryptPasswordEncoder bCryptPasswordEncoder;
+
+    private final EmailService emailService;
+
+    public PersonServiceImpl(PersonRepository personRepository, BCryptPasswordEncoder bCryptPasswordEncoder, EmailService emailService) {
         this.personRepository = personRepository;
+        this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+        this.emailService = emailService;
     }
+
 
     @Override
     public Person createPerson(String firstName, String lastName, String email, String username, String password) {
@@ -33,6 +39,7 @@ public class PersonServiceImpl implements PersonService {
         newPerson.setEmail(email);
         newPerson.setUsername(username);
         newPerson.setPassword(bCryptPasswordEncoder.encode(password));
+        emailService.sendRegistrationEmail(newPerson);
         if (newPerson.getUsername().contains("admin")) {
             newPerson.setRoles(Collections.singleton(new Role(2L, "ROLE_ADMIN")));
         } else {
