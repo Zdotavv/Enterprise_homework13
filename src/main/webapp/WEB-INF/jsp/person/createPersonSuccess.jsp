@@ -17,7 +17,6 @@
 <a href="${pageContext.request.contextPath}/">&#8592 Back to main menu</a>
 <div align="center">
     <h2>Creating Succeeded!</h2>
-    <span>ID:</span><span>${person.idPerson}</span><br/>
     <span>Username:</span><span>${person.username}</span><br/>
     <span>First Name:</span><span>${person.firstName}</span><br/>
     <span>Last Name:</span><span>${person.lastName}</span><br/>

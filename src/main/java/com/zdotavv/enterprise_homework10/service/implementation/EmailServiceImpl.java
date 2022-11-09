@@ -25,7 +25,7 @@ public class EmailServiceImpl implements EmailService {
         try {
             MimeMessageHelper helper = new MimeMessageHelper(message, true);
             helper.setTo(person.getEmail());
-            helper.setSubject("Registration in online shop");
+            helper.setSubject("Registration in online shop completed");
             helper.setText("Dear, " + person.getFirstName() + "!<br>" +
                     "You are successfully registered in our online shop.<br>" +
                     "You can start shopping by this link: " +
