@@ -17,7 +17,7 @@
 </head>
 <body>
 <div>
-    <%--@elvariable id="personForm" type="com.zdotavv.enterprise_homework7.dto.PersonDto"--%>
+    <%--@elvariable id="personForm" type="com.zdotavv.enterprise_homework13.dto.PersonDto"--%>
     <form:form method="POST" modelAttribute="personForm">
     <h2>Registration</h2>
     <div>

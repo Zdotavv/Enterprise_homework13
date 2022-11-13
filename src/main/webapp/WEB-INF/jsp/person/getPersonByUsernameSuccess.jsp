@@ -11,7 +11,7 @@
     <a href="${pageContext.request.contextPath}/">&#8592 Back to main menu</a>
 <h1 align="center">View person By Username</h1>
 <div align="center">
-    <%--@elvariable username="personByUsername" type="com.zdotavv.enterprise_homework10.dto.PersonDto"--%>
+    <%--@elvariable username="personByUsername" type="com.zdotavv.enterprise_homework13.dto.PersonDto"--%>
     <table>
         <tr>
             <td>ID: </td>
