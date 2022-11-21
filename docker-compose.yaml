@@ -18,7 +18,7 @@ services:
       - SPRING_JPA_HIBERNATE_DDL_AUTO=create
 
   postgresqldb:
-    image: 'postgres:14-alpine'
+    image: 'postgres:14'
     container_name: postgresqldb
     restart: always
     ports:
