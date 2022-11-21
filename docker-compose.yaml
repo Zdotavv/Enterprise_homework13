@@ -2,21 +2,28 @@ version: '3.1'
 
 services:
 
-  homework10:
-    image: 'enterprise_homework10-1.0'
+  homework13:
+    build:
+      dockerfile: Dockerfile
+      context: ./
+    restart: always
     ports:
       - "8080:8080"
+    depends_on:
+      - postgresqldb
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgresqldb:5432/postgres
-      - SPRING_DATASOURCE_USERNAME=postgres
-      - SPRING_DATASOURCE_PASSWORD=postgres
-
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgresqldb:5432/onlineshop
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=password
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=create
 
   postgresqldb:
-    image: 'postgres:14'
+    image: 'postgres:14-alpine'
     container_name: postgresqldb
+    restart: always
     ports:
-      - 5432:5432
+      - "5433:5432"
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=onlineshop
