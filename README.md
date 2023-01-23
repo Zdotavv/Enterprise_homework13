@@ -1,6 +1,8 @@
 [![Java CI with Maven](https://github.com/Zdotavv/Enterprise_homework13/actions/workflows/maven.yml/badge.svg)](https://github.com/Zdotavv/Enterprise_homework13/actions/workflows/maven.yml)
 # homework13. Docker
-Online Shop
+
+##Online Shop
+
 ### Used technologies:
 
 Technologies:
@@ -11,4 +13,5 @@ Technologies:
 - Docker
 - CI/CD
 
-  For working Email Sender enter your email and password
+
+##For working Email Sender enter your email and password
